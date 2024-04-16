@@ -17,7 +17,7 @@ contract Bridge {
     event UsdcDeposit(string solAddress, address ethAddress, uint usdcAmount);
     constructor(address test_vault) { // delete the test_vault
         vault = test_vault; // replace with whatever address
-        usdc = address(0x0);
+        usdc = address(0x0) // replace with usdc address on whatever chain;
     }
     function deposit(string calldata solAddress) payable external {
         require(msg.value > 0, "ETH deposit amount must be greater than 0");
