@@ -15,7 +15,7 @@ contract Bridge {
     mapping (address => Deposit) deposits;
     event EthDeposit(string solAddress, address ethAddress, uint ethAmount);
     event UsdcDeposit(string solAddress, address ethAddress, uint usdcAmount);
-    constructor(address test_vault) {
+    constructor(address test_vault) { // delete the test_vault
         vault = test_vault; // replace with whatever address
         usdc = address(0x0);
     }
